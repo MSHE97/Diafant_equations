@@ -1,0 +1,200 @@
+\documentclass[14pt,a4paper]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage{indentfirst}
+\usepackage{misccorr}
+\usepackage{graphicx}
+\graphicspath{{pictures/}}
+\DeclareGraphicsExtensions{.JPG,.PNG,.jpg}
+\usepackage{fancyhdr}
+\usepackage{amsmath}
+\usepackage{listings}
+\usepackage{amssymb}
+\begin{document}
+
+\begin{flushright}
+\textbf{МАТЕМАТИКА} \\
+\end{flushright} 
+УДК 512.5 \vspace*{3mm}
+\begin{center}
+    \textbf{Р. Мустафокулов}
+    \vspace*{3mm}\\
+    \textbf{ОБ ОДНОМ АНАЛОГЕ ФОРМУЛЫ ФАА-ДИ-БРУНО\\
+    И РЕШЕНИЯХ ДИОФАНТОВОГО УРАВНЕНИЯ \boldmath $x_1+2x_2+\ldots+nx_n=n$
+    \vspace*{4mm}\\
+    \textit{Филиал МГУ им. М.В.Ломоносова в г.Душанбе\\}}
+    \textit{(Представлено академиком АН Республики Таджикистан З.Х.Рахмоновым)}
+\end{center}    
+   
+\textbf{\textit{Аннотация. }}\textit{В работе приводится один аналог классической формулы Фаа-ди-Бруно, который применяется при вычислении производных сложой функции и, в отличии от формулы Фаа-ди-Бруно, не использует решения диофантового уравнения. Сравнение этих формул даёт возможность определить все целые неотрицательные решения диофантового уравнения $x_1+2x_2+\ldots+nx_n=n$, для любого натурального $n$.}
+
+\textbf{\textit{Ключевые слова: }}\textit{формула Фаа-ди-Бруно, дифференцирование сложной функции, диофантовое уравнение.}\\
+
+Пусть имеем функции $y = F(u)$ и $u = f(x)$ такие, что определена их суперпозиция $z(x) = F(f(x))$. Пусть функции $F(u)$ и $f(x)$ имеют $n$-ю производную. Тогда для $n$-й производной функции $z(x)$ имеет место \textit{формула Фаа-ди-Бруно} $[1]$:
+\begin{equation}
+    z^{(n)}(x) = \sum_{p_1+2p_2+\ldots+np_n = n}F^{(p_1+p_2+\ldots+p_n)}(u)\cdot Q_{(p_1,p_2,\ldots,p_n)}(f), 
+\end{equation}
+\begin{equation}
+    Q_{(p_1,p_2,\ldots,p_n)}(f) = \dfrac{n!}{p_1!p_2!\ldots p_n!}\left(\dfrac{f^{'}(x)}{1!}\right)^{p_1} \left(\dfrac{f^{''}(x)}{2!}\right)^{p_2}\cdot ... \cdot \left(\dfrac{f^{(n)}(x)}{n!}\right)^{p_n},
+\end{equation}
+где суммирование в (1) производится по всем целым неотрицательным числам $p_1$, $p_2$, ..., $p_n$, удовлетворющим равенству
+\begin{equation}
+    p_1+2p_2+...+np_n = n.
+\end{equation}
+
+Доказательство формулы $(1)$ можно найти в [2, с.108]. Отметим также работу $[3]$, в которой даётся модификация формулы (1) для сложной функции многих переменных $z(x) = F[u(x), v(x), ..., w(x)]$  и приводятся некоторые приложения этой формулы.
+
+\qquad \underline{ }\underline{ }\underline{ }\underline{ }\underline{ }\underline{ }\underline{ }\underline{ }\underline{ }\underline{ }\underline{ }\underline{ }\underline{ }\underline{ }\underline{ }\underline{ }\underline{ }\underline{ }\underline{ }\underline{ }\underline{ }\underline{ }\underline{ }\underline{ }\underline{ }\underline{ }\underline{ }\underline{ }\underline{ }\underline{ }\underline{ }\underline{ }\underline{ }\underline{ }\underline{ }\underline{ }\underline{ }\underline{ }\underline{ }\underline{ }\underline{ }\underline{ }\\
+{\small{}    \textit{\textbf{Адресс для корреспонденции:} Мустафокулов Рахмонкул. 734025, Республика Таджикистан, г. Душанбе ул. Бохтар, 35/1 филиал МГУ в г. Душанбе. E-mail: rmustaf@list.ru}}
+
+Перепишем формулу $(1)$ в другом виде. Пусть $\mathfrak{M} _i^n$ обозначает множество всех целых неотрицательных решений $P^n = (p_1, p_2, ...,p_n)$, уравнения $(3)$, для которых $|P^n| = p_1+p_2+...+p_n = i$. Обозначим
+\begin{equation}
+    Q_i^n (f) = \sum_{P^n \in \mathfrak{M}_i^n}Q_{(p_1, p_2, ..., p_n)}(f)\qquad (1\leqslant i\leqslant n).
+\end{equation}
+Тогда формулу $(1)$ Фаа-ди-Бруно можно записать в виде
+\begin{equation}
+    z^{(n)}(x) = \sum_{i=1}^n F^{(i)}(u)\cdot Q_i^n (f).
+\end{equation}
+
+Формула $(5)$ для нахождения производной, например, четвёртого порядка $z^{(IV)}(x)$ от функции $z(x) = F(f(x))$ применяется следующим образом. Сначала находим все целые неотрицательные решения уравнения
+\begin{equation}
+    p_1+2p_2+3p_3+4p_4 = 4.
+\end{equation}
+Методом подбора можно убедиться, что такими решениями будут компоненты векторов $P_1^4 = (0,0,0,1)$, $P_2^4 = (1,0,1,0)$, $P_3^4 = (0,2,0,0)$, $P_4^4 = (2,1,0,0)$, и $P_5^4 = (4,0,0,0)$. Затем, по формуле $(2)$ определим\\$Q_{P_1^4}(f) = f^{(IV)}(x)$, \qquad$Q_{P_2^4}(f) = 4f^{'}(x)f^{'''}(x)$, \qquad$Q_{P_3^4}(f) = 3\left(f^{''}(x)\right)^2$,\\
+$Q_{P_4^4}(f) = 6\left(f^{'}(x)\right)^2 f^{''}(x)$,\qquad $Q_{P_5^4}(f) = \left(f^{'}(x)\right)^4$.\\
+Далее, составим суммы $(4)$:
+\begin{equation*}
+\begin{split}
+    Q_1^4 (f) &= Q_{P_1^4}(f) = f^{(IV)}(x),\\
+    Q_2^4 (f) &= Q_{P_2^4}(f) + Q_{P_3^4}(f) = 4f^{'}(x)f^{'''}(x) + 3\left(f^{''}(x)\right)^2,\\
+    Q_3^4 (f) &= Q_{P_4^4}(f) = 6\left(f^{'}(x)\right)^2 f^{''}(x),\\
+    Q_4^4 (f) &= Q_{P_5^4}(f) = \left(f^{'}(x)\right)^4.
+\end{split}
+\end{equation*}
+
+Отсюда, в силу $(5)$ получаем окончательно
+\begin{equation}
+\begin{split}
+    z^{(IV)}(x) = F^{'}(u) f^{(IV)}(x) + F^{''}(u&)\left[ 4f^{'}(x)f^{'''}(x) + 3\left( f^{''}(x)\right)^2 \right] +\\+ F^{'''}(u)\cdot 6\left( f^{'}(x)\right)^2& f^{''}(x) + F^{(IV)}(u)\left( f^{'}(x) \right)^4.
+\end{split}
+\end{equation}
+
+В справедливости этой формулы можно убедиться вычисляя последовательно все производные до 4-го порядка включительно от функции $z(x) = F(f(x))$:
+\begin{eqnarray}
+\begin{cases}
+z^{'}(x) = F^{'}(u) \cdot f^{'}(x),\\
+z^{''}(x) = F^{''}(u) \left( f^{'} (x) \right)^2 + F^{'} (x)f^{''}(x),\\
+z^{'''}(x) = F^{'''}(u)\left( f^{'}(x) \right)^3 + F^{''}(u)\cdot 3f^{'}(x)f^{''}(x) + F^{'}(u) f^{'''}(x),\\
+z^{(IV)}(x) = F^{IV}(u)\left( f^{'}(x) \right)^4 + F^{'''}(u) \cdot 6\left( f^{'}(x) \right)^2 f^{''}(x) +\\
+\qquad \qquad \quad + F^{''}(u)\left[ 4f^{'}(x)f^{'''}(x) + 3\left(f^{''}(x)\right)^2 \right] + F^{'}(u)f^{(IV)}(x),
+\end{cases}
+\end{eqnarray}
+то-есть, формула $(7)$ для $z^{(IV)}(x)$ является спаведливой.
+
+Таким образом, для применения формулы Фаа-ди-Бруно при вычислении производной $z^{(n)}(x)$, необходимо знать все целые неотрицательные решения уравнения $(3)$, то-есть задача сводится к решению диофантового уравнения $(3)$. Но, как известно (см., напр., $[4]$ ), решить уравнения типа $(3)$ для произвольного $n$ является непростой задачей.
+
+Ниже предлагается другая формула для вычисления $n$-й производной от функции $z(x) = F(f(x))$, которая в отличие от формулы Фаа-ди-Бруно не использует решения уравнения $(3)$.
+
+Из равенств $(8)$ видно, что производные $z^{(k)}(x)$ для каждого $k = 1$, $2$, $3, ...$ выражается линейно через $F^{'}(u)$, $F^{''}(u)$, $F^{'''}(u)$, ..., $F^{(k)}(u)$, причём коэффициент при $F^{i}(u)$ $(i = 1, 2, ..., n) $ определяется произведением степеней производных \vspace{2mm}
+\begin{equation*}
+\left( f^{'}(x) \right)^{s_1} \left( f^{''}(x) \right)^{s_2} \cdot ... \cdot \left( f^{(k)}(x) \right)^{s_k},
+\end{equation*}
+где $s_1 + s_2 + ... + s_k = i$. Обозначим эти коэффициенты через $R_i^k(f)$, где верхний индекс $k$ означает порядок производной $z^{(k)}(x)$, а нижний индекс $i$ - порядок производной $F^{(i)} (u)$ в разложении $z^{(k)}(x)$. Тогда $z^{(k)}(x)$, для любого $k = 1, 2, 3, ...$, можно записать в виде 
+\begin{equation}
+    z^{(k)}(x) = \sum_{i = 1}^{k} F^{(i)}(u) R_i^k(f).
+\end{equation}
+
+Определим конкретное значения коэффициентов $R_i^k(f)$ для каждого $k$ и \qquad$1\leqslant i\leqslant n$ в равенстве $(9)$. Прежде всего заметим, что для любого $k = 1$, $2$, $3$, ..., $n$ имеют место равенства
+\begin{equation*}
+     R_1^k(f) = f^{(k)}(x), \qquad  R_k^k(f) = \left(f^{'}(x)\right)^k.
+\end{equation*}
+Далее,
+\begin{equation*}
+\begin{split}
+     z^{(k)}&(x) = \left( z^{(k-1)}(x) \right)' = \left( \sum_{i = 1}^{k-1} F^{(i)}(u) R_i^{k-1}(f) \right)' =\\
+     = \sum_{i = 1}^{k-1} &\left[ F^{(i+1)}(u) f^{'}(x)R_i^{k-1}(f) + F^{(i)}(u)\left( R_i^{k-1}(f) \right)' \right] = \\
+     = \sum_{i = 1}^{k-1} & F^{(i+1)}(u) f^{'}(x)R_i^{k-1}(f) + \sum_{i = 1}^{k-1} F^{(i)}(u)\left( R_i^{k-1}(f) \right)'.
+\end{split}
+\end{equation*}
+Объединим слагаемые обеих сумм, содержащие одинаковые порядки производной $F^{(i)}(u)$. Произведение $F^{(k)}(u) f^{'}(x)R_{k-1}^{k-1}(f) = F^{(k)}(u) \left( f^{'}(x) \right)^k = F^{(k)}(u) R_{k}^{k}(f)$ входит только в первую сумму (при $i = k-1$), а $F^{'}(u)\left( R_1^{k-1}(f) \right)' = F^{'}(u)\left( f^{(k-1)}(x) \right)' = F^{'}(u) f^{(k)}(x)$ входит только во вторую сумму (при $i = 1$). Объединяя все остальные произведения, входящие в эти суммы, получим
+\begin{equation*}
+    F^{(i)}(u)\left[ f^{'}(x) R_{i-1}^{k-1}(f) + \left(R_{i}^{k-1}(f)\right)' \right], \quad i = 2, 3, ..., k-1.
+\end{equation*}
+Поэтому сравнивая эти выражения с правой частью равенства $(9)$, для коэффициентов $R_i^k(f)$ получаем следующие формулы:
+\begin{equation*}
+\begin{split}
+    R_i^k(f) =& f^{'}(x)R_{i-1}^{k-1}(f) +  \left(R_{i}^{k-1}(f)\right)', \quad \text{при}\quad i = 2, 3, ..., k-1,\\
+    &R_1^k(f) = f^{(k)}(x), \quad R_k^k(f) = \left( f^{'}(x) \right)^k.
+\end{split}
+\end{equation*}
+
+Таким образом, справедливо утверждение 
+
+\textbf{Теорема 1.} \quad \textit{Пусть функции $y = F(u)$, $u = f(x)$ имеют $n$-е производные. Тогда для $n$-й производной функции $z(x) = F(f(x))$ справедлива формула}
+\begin{equation}
+    z^{(n)}(x) = \sum_{i=1}^n F^{(i)}(u) R_i^n(f),
+\end{equation}
+\textit{где коэффициенты $R_i^n(f)$ определены равенствами}
+\begin{eqnarray}
+\begin{cases}
+    R_i^n(f) = f^{'}(x) R_{i-1}^{n-1}(f) + \left( R_{i}^{n-1}(f) \right)' \quad (i = 2, 3, ..., n-1),\\
+    R_1^n(f) = f^{(n)}(x), \quad R_n^n(f) = \left( f^{'}(x) \right)^n.
+\end{cases}
+\end{eqnarray}
+
+Покажем теперь как при помощи формул $(10)$ и $(11)$ вычисляется $z^{(4)}(x)$ от функции $z(x) = F\left(f(x)\right)$, не используя целые неотрицательные решения уравнения $(6)$. Из равенств $(11)$ при $n=4$ имеем
+\begin{eqnarray}
+\begin{cases}
+\begin{split}
+    R_1^4(f) &= f^{(IV)}(x),\\
+    R_2^4(f) &= f^{'}(x)R_1^3(f) + \left( R_2^3(f) \right)' = f^{'}(x)f^{'''}(x) + \left( f^{'}(x)R_1^2(f) + \left( R_2^2(f) \right)' \right)'=\\
+    &= f^{'}(x)f^{'''}(x) + \left( f^{'}(x)f^{''}(x) + 2f^{'}(x)f^{''}(x) \right)' = 4f^{'}(x)f^{'''}(x) + 3\left( f^{''}(x) \right)^2,\\
+    R_3^4(f) &= f^{'}(x) R_{2}^{3}(f) + \left( R_{3}^{3}(f) \right)' = f^{'}(x)\cdot3f^{'}(x)f^{''}(x)+ 3\left(f^{'}(x)\right)^2 f^{''}(x) =\\
+    &= 6\left(f^{'}(x)\right)^2 f^{''}(x),\\
+    R_4^4(f) &= \left( f^{'}(x) \right)^4.
+\end{split}
+\end{cases}
+\end{eqnarray}
+Подставляя эти выражения в формулу $(10)$ при $n = 4$, получаем равенсто $(7)$, которое на этот раз было установлено при помощи формул $(10)$ и $(11)$, не используя решения уравнения $(6)$. 
+
+Формула $(10)$ является аналогом формулы Фаа-ди-Бруно $(5)$, коэффициенты $R_i^n(f)$ которого определяются равенствами $(11)$ и, в отличие от $(4)$, для их определения не требуются решения диофантового уравнения $(3)$.
+
+Таким образом, для вычисления $n$-й производной $z^{(n)}(x)$ функции $z(x) = F(f(x))$ мы имеем две формулы: формулу Фаа-ди-Бруно $(5)$, которая использует целые неотрицательные решения диофантового уравнения $(3)$ и аналог этой формулы - формулу $(10)$, которая использует рекурентное соотношение $(11)$. Сравнивая эти формулы, для коэффициентов получаем равенство 
+\begin{equation}
+    Q_i^n(f) = R_i^n(f),
+\end{equation}
+где $n$ - любое натуральное число и $i = 1, 2, ..., n$. 
+
+Согласно определению, коэффициенты $R_i^n(f)$ выражаются, в конечном итоге, через произведения
+\begin{equation}
+\left( f^{'}(x) \right)^{s_1} \left( f^{''}(x) \right)^{s_2} \cdot ... \cdot \left( f^{(n)}(x) \right)^{s_n},
+\end{equation}
+где $s_1 + s_2 + ... + s_n = i$ (ср. с равенствами $(12)$, при $n = 4$), причём $s_1, s_2, ..., s_n$ определяются из системы равенств $(11)$ и не связаны с решениями уравнения $(3)$. С другой стороны, в силу равенств $(4)$ и $(13)$ имеем \text{$S^n = (s_1, s_2, ..., s_n) \in \mathfrak{M}_i^n$}, то-есть числа $s_1, s_2, ..., s_n$ образуют целые неотрицательные решения уравнения $(3)$.
+
+Таким образом, мы приходим к следующему утверждению:
+
+\textbf{Теорема 2.} \quad \textit{Для дюбого натурального $n$ выражения $R_i^n(f) \quad (i = 1, 2, ...,n)$ из системы равенств $(11)$, определяют все целые неотрицательные решения уравнения $x_1+2x_2+...+nx_n=n$.}
+
+В качестве приложения теоремы 2 определим все целые неотрицательные решения уравнения $(6)$ с помощью равенств $(11)$ для коэффициентов $R_i^4(f)$. Из системы равенств $(12)$ и $(14)$ (при $n = 4$) видим, что коэффициент $R_1^4(f)$ пораждает вектор $S_1^4 = (0, 0, 0, 1)$, а коэффициент $R_2^4(f)$ пораждает два вектора $S_2^4 = (1, 0, 1, 0)$, и $S_3^4 = (0, 2, 0, 0)$, для которых $|S_2^4| = |S_3^4| = 2$. Коэффициенты $R_3^4(f)$ и $R_4^4(f)$ пораждают сответственно векторы $S_4^4 = (2, 1, 0, 0)$ и $S_5^4 = (4, 0, 0, 0)$. Поэтому, в силу $(13)$, $(4)$ и $(2)$ получаем, что компоненты этих векторов удовлетворяют уравнению $(6)$.\vspace{8mm}\\
+
+\begin{center}
+    Л И Т Е Р А Т У Р А
+\end{center}
+    1.  Faa di Bruno. Note sur un nuvelle formul de calcul differentiel. - Quart. J. M. 1857, 1, p.359-360 \vspace{3mm}\\
+    2.  Архипов Г.Н., Садовничий В.А., Чубариков В.Н. Лекции по математическому анализу. -М.: Дрофа, 2004. -640 с.\vspace{3mm}\\
+    3.  Шабат А.Б., Эфендиев М.Х. О приложениях формулы Фаа-ди-Бруно. - Уфимский математ. журнал, 2017, т.9., $N^o$3,  с.132-137 \vspace{3mm}\\  
+    4.  Гельфонд А.О. Решение уравнений в целых числах, 4-е изд. -М.: Физматгиз, 1983.
+\newpage
+\begin{center}
+\textbf{R. Mustafokulov}
+    \vspace*{3mm}\\
+    \textbf{ABOUT ONE ANALOGUE FORMULA FAA-DI-BRUNO\\
+    AND SOLUTIONS OF THE DIOPHANTINE EQUATION \boldmath $x_1+2x_2+\ldots+nx_n=n$
+    \vspace*{4mm}\\
+    \textit{Branch of Moscow State University M.V. Lomonosov in Dushanbe\\}}
+\end{center}    
+   
+\textit{The paper gives an analogue of the classical Faa-di-Bruno's formula, which is used in the calculation of derivatives of a complex function and, in contrast to the Faa-di-Bruno formula, does not use solutions of the Diophantine equation. Comparison of these formulas makes it possible to determine for any natural $n$ all non-negative integer solutions of the Diophantine equation $x_1+2x_2+\ldots+nx_n=n$.}
+
+\textbf{\textit{Keywords: }}\textit{the Faa-di-Bruno formula, the differentiation of a complex function, the Diophantine equation.}\\
+\end{document}
